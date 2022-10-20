@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: concept-tagging.html
 keywords: tags, overview, conceptual, resource tags, volume tags, AWS tags, Azure tags
-summary: Cloud Manager enables you to apply tags to your _existing_ resources to help organize and manage those resources. Tags are metadata that you can use to group resources to identify applications, environments, regions, billing codes, cloud providers, and more.
+summary: BlueXP enables you to apply tags to your _existing_ resources to help organize and manage those resources. Tags are metadata that you can use to group resources to identify applications, environments, regions, billing codes, cloud providers, and more.
 ---
 
 = Learn about tagging
@@ -13,11 +13,11 @@ summary: Cloud Manager enables you to apply tags to your _existing_ resources to
 :imagesdir: ./media/
 
 [.lead]
-Cloud Manager enables you to apply tags to your _existing_ resources to help organize and manage those resources. Tags are metadata that you can use to group resources to identify applications, environments, regions, billing codes, cloud providers, and more.
+BlueXP (formerly Cloud Manager) enables you to apply tags to your _existing_ resources to help organize and manage those resources. Tags are metadata that you can use to group resources to identify applications, environments, regions, billing codes, cloud providers, and more.
 
 Tags consists of a *tag key* and a *tag value*. For example, you can create a tag key called "Environment" and then add tag values of "Production" and "Test". After they are applied to your resources, you can quickly search for and view resources that match the key/value pair.
 
-You can add tag key/value pairs to _new_ resources when you create a working environment or an Azure NetApp Files volume. You can also define tag key/value pairs in link:task-define-templates.html[Cloud Manager templates that you build] for your storage admins and DevOps engineers.
+You can add tag key/value pairs to _new_ resources when you create a working environment or an Azure NetApp Files volume. You can also define tag key/value pairs in link:task-define-templates.html[BlueXP templates that you build] for your storage admins and DevOps engineers.
 
 You can add new tags using the Tagging service, and you can change or delete existing tags.
 
@@ -32,7 +32,7 @@ The Tagging service offers the following features and benefits:
 
 == Pricing and licenses
 
-The ability to tag your resources requires no licensing and is free to use by all Cloud Manager users with the Account Admin or Workspace Admin role.
+The ability to tag your resources requires no licensing and is free to use by all BlueXP users with the Account Admin or Workspace Admin role.
 
 == Resources that you can tag
 
@@ -83,7 +83,7 @@ For information about Google labels, refer to https://cloud.google.com/compute/d
 
 === Verify your AWS Connector permissions
 
-If you created the Connector using Cloud Manager version 3.9.10 or greater, then you're all set. If you created the Connector using an earlier version of Cloud Manager, then you'll need to add some required permissions for the Cloud Manager IAM role to tag AWS EC2 instances:
+If you created the Connector using BlueXP version 3.9.10 or greater, then you're all set. If you created the Connector using an earlier version of BlueXP, then you'll need to add some required permissions for the BlueXP IAM role to tag AWS EC2 instances:
 
 [source,json]
 {
@@ -104,7 +104,7 @@ If you created the Connector using Cloud Manager version 3.9.10 or greater, then
 
 === Verify your Azure Connector permissions
 
-If you created the Connector using Cloud Manager version 3.9.10 or greater, then you're all set. If you created the Connector using an earlier version of Cloud Manager, then you'll need to add some required permissions for the Cloud Manager Operator IAM role to tag Azure resources:
+If you created the Connector using BlueXP version 3.9.10 or greater, then you're all set. If you created the Connector using an earlier version of BlueXP, then you'll need to add some required permissions for the BlueXP Operator IAM role to tag Azure resources:
 
 [source,json]
 {
