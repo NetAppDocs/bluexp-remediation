@@ -30,7 +30,7 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Launch the Application Templates service
 
 [role="quick-margin-para"]
-Select the *AppTemplate* service, click the *Editor* tab, and select the actions you'll use in your template.
+Select *Health > Remediation*, click the *Editor* tab, and select the actions you'll use in your template.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Build the template by selecting "actions" and defining parameters
 
@@ -75,7 +75,7 @@ Create 30 daily, 13 weekly, and 3 monthly backups (using the _3 Months Retention
 
 .Steps
 
-. Select the *AppTemplate* service, click the *Templates* tab, and click *Add New Template*.
+. Select *Health > Remediation*, click the *Templates* tab, and click *Add New Template*.
 +
 The _Select_a Template_ page is displayed.
 +
@@ -189,7 +189,7 @@ See https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-manage-a
 
 .Steps
 
-. Select the *AppTemplate* service, click the *Templates* tab, and click *Add New Template*.
+. Select *Health > Remediation*, click the *Templates* tab, and click *Add New Template*.
 +
 The _Select_a Template_ page is displayed.
 +
@@ -297,7 +297,7 @@ See https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-provisioning-o
 
 .Steps
 
-. Select the *AppTemplate* service, click the *Templates* tab, and click *Add New Template*.
+. Select *Health > Remediation*, click the *Templates* tab, and click *Add New Template*.
 +
 The _Select_a Template_ page is displayed.
 +
@@ -407,7 +407,7 @@ See https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deployi
 
 .Steps
 
-. Select the *AppTemplate* service, click the *Templates* tab, and click *Add New Template*.
+. Select *Health > Remediation*, click the *Templates* tab, and click *Add New Template*.
 +
 The _Select_a Template_ page is displayed.
 +
@@ -502,7 +502,7 @@ The current _Find Existing Resources_ action functionality enables you to find v
 
 .Steps
 
-. Select the *AppTemplate* service, click the *Templates* tab, and click *Add New Template*.
+. Select *Health > Remediation*, click the *Templates* tab, and click *Add New Template*.
 +
 The _Select_a Template_ page is displayed.
 +
@@ -575,7 +575,7 @@ Using the _Find Existing Resources_ action you can find the working environment,
 
 .Steps
 
-. Select the *AppTemplate* service, click the *Templates* tab, and click *Add New Template*.
+. Select *Health > Remediation*, click the *Templates* tab, and click *Add New Template*.
 +
 The _Select_a Template_ page is displayed.
 +

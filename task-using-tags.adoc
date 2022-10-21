@@ -21,7 +21,7 @@ If you want to see all the resources that have a certain tag, or a certain tag a
 
 .Steps
 
-. Select the *AppTemplate* service and click the *Tags* tab.
+. Select *Health > Remediation* and click the *Tags* tab.
 
 . If necessary, choose the credentials for a specific cloud provider in the *Select credentials* field.
 
