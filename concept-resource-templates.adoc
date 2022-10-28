@@ -49,7 +49,7 @@ For example, you can create a template that creates a Cloud Volumes ONTAP volume
 
 More actions will be added over time by NetApp.
 
-== How AppTemplate work
+== How AppTemplate works
 
 The AppTemplate service is made up of 3 parts. The available template "actions", the customized application template, and the deployed resource as a result of running the template. The following image shows the relationship between each component:
 
