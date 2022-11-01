@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-using-tags.html
 keywords: tags, resource tags, volume tags, add tags, delete tags, view tags
-summary: You can view, add, modify, and delete the tags assigned to your existing resources using the Cloud Manager Tagging service. This allows you to organize and simplify the management of your resources.
+summary: You can view, add, modify, and delete the tags assigned to your existing resources using the BlueXP Tagging service. This allows you to organize and simplify the management of your resources.
 ---
 
 = Manage tags for your resources
@@ -13,7 +13,7 @@ summary: You can view, add, modify, and delete the tags assigned to your existin
 :imagesdir: ./media/
 
 [.lead]
-You can view, add, modify, and delete the tags assigned to your existing resources using the Cloud Manager Tagging service. This allows you to organize and simplify the management of your resources.
+You can view, add, modify, and delete the tags assigned to your existing resources using the BlueXP Tagging service. This allows you to organize and simplify the management of your resources.
 
 == Search for resources that have certain tags
 
@@ -21,7 +21,7 @@ If you want to see all the resources that have a certain tag, or a certain tag a
 
 .Steps
 
-. Select the *AppTemplate* service and click the *Tags* tab.
+. Select *Health > Remediation* and click the *Tags* tab.
 
 . If necessary, choose the credentials for a specific cloud provider in the *Select credentials* field.
 
