@@ -74,7 +74,7 @@ To view a drift report for resources that have been created from your templates,
 
 === BlueXP replication health details in the drift report
 
-When link:task-define-templates.html#add-replication-functionality-to-a-volume[enabling BlueXP replication on a volume using templates], you can choose to show more detailed replication information in the drift report by enabling drift in the "Enable replication health monitoring" field. When enabled, the drift report shows whether the health of the BlueXP replication relationship is healthy or unhealthy (drifted), along with the SnapMirror lag time, status, and last transfer time.
+When link:task-define-templates.html#add-bluexp-classification-functionality-to-a-volume[enabling BlueXP replication on a volume using templates], you can choose to show more detailed replication information in the drift report by enabling drift in the "Enable replication health monitoring" field. When enabled, the drift report shows whether the health of the BlueXP replication relationship is healthy or unhealthy (drifted), along with the SnapMirror lag time, status, and last transfer time.
 
 This screenshot shows the replication details for a SnapMirror relationship that is unhealthy in the drift report.
 
