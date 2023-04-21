@@ -1,5 +1,5 @@
 settings:
-  name: AppTemplate
+  name: BlueXP remediation
   platform: cloud
   internal:
     pdf_enabled: true
@@ -9,17 +9,17 @@ settings:
   rss_page: "whats-new.html"
 sidebar:
   entries:
-    - title: AppTemplate docs
+    - title: BlueXP remediation docs
       url: /index.html
     - title: Release notes
       url: /whats-new.html
     - title: Get started
       entries:
-        - title: Learn about AppTemplate
+        - title: Learn about BlueXP remediation
           url: /concept-resource-templates.html
         - title: Learn about tagging
           url: /concept-tagging.html
-    - title: Use AppTemplate
+    - title: Use BlueXP remediation
       entries:
         - title: Use templates to standardize resource creation
           entries:
@@ -53,11 +53,11 @@ homepage:
   tiles:
     - title: Get started
       links:
-        - title: Learn about AppTemplate
+        - title: Learn about BlueXP remediation
           url: concept-resource-templates.html
         - title: Learn about Tagging
           url: concept-tagging.html
-        - title: What’s New
+        - title: What's New
           url: whats-new.html
     - title: Create templates
       links:
@@ -69,7 +69,7 @@ homepage:
           url: task-define-templates.html#create-a-template-for-an-azure-netapp-files-volume
         - title: On-premises ONTAP volume
           url: task-define-templates.html#create-a-template-for-an-on-premises-ontap-volume
-        - title: Add Backup, Data Sense, or Replication functionality to a volume
+        - title: Add Backup, Classification, or Replication functionality to a volume
           url: task-define-templates.html#examples-of-enabling-services-using-templates
     - title: Create resources using templates
       links:
@@ -88,8 +88,8 @@ homepage:
     - title: Blogs & community
       links:
         - title: NetApp Community
-          url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+          url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
         - title: BlueXP blog
-          url: https://cloud.netapp.com/blog
+          url: https://bluexp.netapp.com/blog
         - title: Cloud webinars
-          url: https://cloud.netapp.com/events
+          url: https://bluexp.netapp.com/events

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-run-templates.html
 keywords: templates, resource templates, services templates, volume templates, working environment templates
-summary: Select one of the application templates that your organization has built to create working environments or volumes that are optimized for specific workloads and applications. Templates also enable you to activate Cloud Backup, Cloud Data Sense, and Replication (SnapMirror) on the volumes, or on existing volumes.
+summary: Select one of the application templates that your organization has built to create working environments or volumes that are optimized for specific workloads and applications. Templates also enable you to activate BlueXP backup and recovery, BlueXP classification, and BlueXP replication (SnapMirror) on the volumes, or on existing volumes.
 ---
 
 = Create or modify resources using templates
@@ -13,7 +13,7 @@ summary: Select one of the application templates that your organization has buil
 :imagesdir: ./media/
 
 [.lead]
-Select one of the application templates that your organization has built to create working environments or volumes that are optimized for specific workloads and applications. Templates also enable you to activate https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html[Cloud Backup^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[Cloud Data Sense^], and https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html[Replication (SnapMirror)^] on the created volumes, or on existing volumes.
+Select one of the application templates that your organization has built to create working environments or volumes that are optimized for specific workloads and applications. Templates also enable you to activate https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html[BlueXP backup and recovery^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[BlueXP classification^], and https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html[BlueXP replication^] on the created volumes, or on existing volumes.
 
 Templates enable you to create volumes for Cloud Volumes ONTAP, Azure NetApp Files, and on-premises ONTAP systems.
 
@@ -27,7 +27,7 @@ Get started quickly by following these steps, or scroll down to the remaining se
 * Before you can create a volume for a Cloud Volumes ONTAP, on-premises ONTAP, or Azure NetApp Files system using a template, make sure you have access to an appropriate working environment where the volume will be deployed.
 
 [role="quick-margin-list"]
-* If the template activates a cloud service on the volume, such as https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html[Cloud Backup^] or https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[Cloud Data Sense^], ensure that the service is active and licensed in your environment.
+* If the template activates a cloud service on the volume, such as https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html[BlueXP backup and recovery^] or https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[BlueXP classification^], ensure that the service is active and licensed in your environment.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Launch the Application Templates service
 
@@ -51,7 +51,7 @@ Read the following requirements to make sure that you have a supported configura
 
 * When creating an Azure NetApp Files volume, make sure you have an Azure NetApp Files working environment available.
 
-* If the template activates a cloud service on the volume, such as  https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html[Cloud Backup^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[Cloud Data Sense^], or https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html[Replication (SnapMirror)^], ensure that the service is active and licensed in your environment.
+* If the template activates a cloud service on the volume, such as  https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html[BlueXP backup and recovery^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[BlueXP classification^], or https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html[BlueXP replication^], ensure that the service is active and licensed in your environment.
 
 == Select and run a volume template
 
@@ -64,7 +64,7 @@ Regardless of the method you choose, the details about the required volume param
 
 * https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-create-volumes.html#create-a-volume-from-a-template[How to provision Cloud Volumes ONTAP volumes^]
 * https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html#create-volumes-from-templates[How to provision Azure NetApp Files volumes^]
-* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-provisioning-ontap.html#creating-volumes-from-templates[How to provision on-premises ONTAP volumes^]
+* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-connector.html#create-volumes-from-templates[How to provision on-premises ONTAP volumes^]
 
 === Run a volume template from the working environment
 
@@ -134,7 +134,7 @@ image:screenshot_template_run_from_dashboard_we.png[A screenshot showing the par
 
 == Select and run a template that finds existing resources
 
-You can run a template that finds certain resources (for example, volumes), and then enables a cloud service on those resources (for example, Cloud Backup), if your company has created a template using this functionality. When running the template, you can make some minor adjustments so that you apply the cloud service only to the appropriate resources.
+You can run a template that finds certain resources (for example, volumes), and then enables a cloud service on those resources (for example, BlueXP backup and recovery), if your company has created a template using this functionality. When running the template, you can make some minor adjustments so that you apply the cloud service only to the appropriate resources.
 
 .Steps
 
@@ -152,12 +152,12 @@ The _Run Template_ page appears and immediately runs the search that was defined
 +
 image:screenshot_template_find_search_results.png[A screenshot showing how the volumes that were returned from the Find Resource search criteria.]
 
-. If the results are what you expected, select the checkbox for each volume that you want to have Cloud Backup enabled using the criteria from the _Enable Cloud Backup on Volume_ part of the template and click *Run Template*.
+. If the results are what you expected, select the checkbox for each volume that you want to have BlueXP backup and recovery enabled using the criteria from the _Enable Cloud Backup on Volume_ part of the template and click *Run Template*.
 +
 If the results are not what you expected, click image:screenshot_edit_icon.gif[edit pencil icon] next to _Search Criteria_ and refine the search further.
 
 .Results
 
-The template will run and it will enable Cloud Backup on each volume that you checked from the search criteria.
+The template will run and it will enable BlueXP backup and recovery on each volume that you checked from the search criteria.
 
 Any error will be called out in the _Running your Template_ page, and you can resolve the issues if needed.
