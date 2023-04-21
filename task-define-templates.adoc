@@ -25,7 +25,7 @@ Get started quickly by following these steps, or scroll down to the remaining se
 * Before users can create a volume for a Cloud Volumes ONTAP, on-premises ONTAP, or Azure NetApp Files system using a template, make sure they have access to an appropriate working environment where the volume will be deployed.
 
 [role="quick-margin-list"]
-* If you plan to add a Cloud service "action" to your template, such as https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html[Cloud Backup^] or https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[Cloud Data Sense^], ensure that the service is active and licensed in your environment.
+* If you plan to add a Cloud service "action" to your template, such as https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html[BlueXP backup and recovery^] or https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[BlueXP classification^], ensure that the service is active and licensed in your environment.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Launch the Application Templates service
 
@@ -43,17 +43,17 @@ Read the following requirements to make sure that you have a supported configura
 
 * If you don't already have a Connector, https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html[see how to create Connectors^] for AWS, Azure, and GCP.
 
-* When creating a Cloud Volumes ONTAP volume template, make sure you have a Cloud Volumes ONTAP working environment available for your users. See how to launch a Cloud Volumes ONTAP system in https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html[AWS^], https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html[Azure^], or in https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html[GCP^].
+* When creating a Cloud Volumes ONTAP volume template, make sure you have a Cloud Volumes ONTAP working environment available for your users. See how to launch a Cloud Volumes ONTAP system in https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html[AWS^], https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-azure.html[Azure^], or in https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html[GCP^].
 
 * When creating an on-premises ONTAP volume template, make sure you have an on-premises ONTAP working environment available for your users. See how to https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html[discover an on-premises ONTAP system^] in BlueXP.
 
 * When creating an Azure NetApp Files volume template, make sure you have an Azure NetApp Files working environment available for your users. See how to https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-quick-start.html[create an Azure NetApp Files working environment^] in BlueXP.
 
-* If you plan to use Cloud Backup to backup up a volume in the template, ensure that your environment has activated Cloud Backup.
+* If you plan to use BlueXP backup and recovery to backup up a volume in the template, ensure that your environment has activated BlueXP backup and recovery.
 
-* If you plan to use Cloud Data Sense to scan volumes in the template, ensure that your environment has activated Cloud Data Sense.
+* If you plan to use BlueXP classification to scan volumes in the template, ensure that your environment has activated BlueXP classification.
 
-* If you plan to enable Replication in the template, and the template is for an on-premises ONTAP volume, the ONTAP cluster must have an active SnapMirror license.
+* If you plan to enable BlueXP replication in the template, and the template is for an on-premises ONTAP volume, the ONTAP cluster must have an active SnapMirror license.
 
 == Examples of creating resources using templates
 
@@ -65,11 +65,11 @@ See https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-create-
 
 For this example we'll create a template named "CVO volume for databases" and include the following 2 actions:
 
-*	Create Cloud Volumes ONTAP Volume
+* Create Cloud Volumes ONTAP Volume
 +
 Make the volume for the AWS environment, configure it with 100 GB of storage, set the Snapshot Policy to "default", and enable Storage Efficiency.
 
-*	Enable Cloud Backup
+* Enable BlueXP backup and recovery
 +
 Create 30 daily, 13 weekly, and 3 monthly backups (using the _3 Months Retention_ policy).
 
@@ -157,7 +157,7 @@ See https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data
 +
 If the template values are correctly completed, a green checkmark is added to the "Create Volume in Cloud Volumes ONTAP" box.
 
-. Click the *Enable Cloud Backup on Volume* box and the _Enable Cloud Backup on Volume Action Definition_ dialog is displayed so you can fill in the Cloud Backup details.
+. Click the *Enable Cloud Backup on Volume* box and the _Enable Cloud Backup on Volume Action Definition_ dialog is displayed so you can fill in the BlueXP backup and recovery details.
 +
 image:screenshot_create_template_add_action.png[A screenshot showing additional actions that you can add to the created volume.]
 
@@ -165,7 +165,7 @@ image:screenshot_create_template_add_action.png[A screenshot showing additional 
 
 . Below the Working Environment and Volume Name fields there are three selections you use to indicate which volume will have backup enabled. See link:reference-template-building-blocks.html#pass-values-between-template-actions[how to complete these fields].
 
-. Click *Apply* and the Cloud Backup dialog is saved.
+. Click *Apply* and the BlueXP backup and recovery dialog is saved.
 
 . Enter the template name *CVO volume for databases* (for this example) in the top left.
 
@@ -293,7 +293,7 @@ See <<What to do after you have created the template,what you should tell your u
 
 === Create a template for an on-premises ONTAP volume
 
-See https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-provisioning-ontap.html#creating-volumes-for-ontap-clusters[how to provision on-premises ONTAP volumes^] for details about all the parameters you need to complete in the on-premises ONTAP volume template.
+See https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-connector.html#create-volumes[how to provision on-premises ONTAP volumes^] for details about all the parameters you need to complete in the on-premises ONTAP volume template.
 
 .Steps
 
@@ -448,7 +448,7 @@ For information about tags, refer to https://docs.aws.amazon.com/AWSEC2/latest/U
 
 |===
 
-. *Location & Connectivity*: Enter the network information that you recorded in the https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-planning-your-config.html#aws-network-information-worksheet[AWS worksheet^]. This includes the AWS Region, VPC, Subnet, and Security Group.
+. *Location & Connectivity*: Enter the network information that you recorded in the https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-planning-your-config.html#collect-networking-information[AWS worksheet^]. This includes the AWS Region, VPC, Subnet, and Security Group.
 +
 If you have an AWS Outpost, you can deploy a single node Cloud Volumes ONTAP system in that Outpost by selecting the Outpost VPC. The experience is the same as any other VPC that resides in AWS.
 
@@ -462,7 +462,7 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-
 
 . *Charging Method*: Specify which charging option would you like to use with this system.
 +
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html[Learn about these charging methods^].
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-aws.html[Learn about these charging methods^].
 
 . *NetApp Support Site Account*: Select a NetApp Support Site account.
 
@@ -494,11 +494,11 @@ See <<What to do after you have created the template,what you should tell your u
 
 Using the _Find Existing Resources_ action you can find specific working environments or find existing volumes by providing a variety of filters so you can narrow your search to just the resources you are interested in. After finding the correct resources, you can add volumes to a working environment, or enable a cloud service on the resulting volumes.
 
-NOTE: At this time you can find volumes within Cloud Volumes ONTAP, on-premises ONTAP, and Azure NetApp Files systems. And you can enable Cloud Backup on Cloud Volumes ONTAP and on-premises ONTAP volumes. Additional resources and services will be available at a later time.
+NOTE: At this time you can find volumes within Cloud Volumes ONTAP, on-premises ONTAP, and Azure NetApp Files systems. And you can enable BlueXP backup and recovery on Cloud Volumes ONTAP and on-premises ONTAP volumes. Additional resources and services will be available at a later time.
 
 === Find existing volumes and activate a cloud service
 
-The current _Find Existing Resources_ action functionality enables you to find volumes on Cloud Volumes ONTAP and on-premises ONTAP working environments that do not currently have Cloud Backup or Cloud Data Sense enabled. When you enable Cloud Backup on specific volumes, this action also sets the backup policy you configured as the default policy for that working environment - so all future volumes on those working environments can use the same backup policy.
+The current _Find Existing Resources_ action functionality enables you to find volumes on Cloud Volumes ONTAP and on-premises ONTAP working environments that do not currently have BlueXP backup and recovery or BlueXP classification enabled. When you enable BlueXP backup and recovery on specific volumes, this action also sets the backup policy you configured as the default policy for that working environment - so all future volumes on those working environments can use the same backup policy.
 
 .Steps
 
@@ -526,7 +526,7 @@ image:screenshot_define_find_resource_action1.png[A screenshot showing a blank f
 +
 This is the only required entry for this action. You could click *Continue* now and you'll receive a list of all volumes on all Cloud Volumes ONTAP systems in your environment.
 +
-Instead, it is recommended that you fill out a few filters to reduce the number of results (in this case, volumes) on which you'll apply the Cloud Backup action.
+Instead, it is recommended that you fill out a few filters to reduce the number of results (in this case, volumes) on which you'll apply the BlueXP backup and recovery action.
 
 . In the _Context_ area you can select a specific working environment and some other details about that working environment.
 +
@@ -557,7 +557,7 @@ Your completed _Find Existing Resources_ action appears in the editor window.
 +
 The _Enable Cloud Backup On Volume_ action is added to the window.
 +
-image:screenshot_template_add_backup_action.png[A screenshot showing the steps to add a Cloud Backup action to your template.]
+image:screenshot_template_add_backup_action.png[A screenshot showing the steps to add a BlueXP backup and recovery action to your template.]
 
 . Now you can define the Backup criteria as described in <<Add Backup functionality to a volume,Adding Backup functionality to a volume>> so that the template applies the correct backup policy to the volumes you select from the _Find Existing Resources_ action.
 
@@ -615,11 +615,11 @@ See <<What to do after you have created the template,what you should tell your u
 
 == Examples of enabling services using templates
 
-Service templates enable you to activate Cloud Backup, Cloud Data Sense, or Replication (SnapMirror) services on a newly created volume.
+Service templates enable you to activate BlueXP backup and recovery, BlueXP classification, or BlueXP replication (SnapMirror) services on a newly created volume.
 
 === Add Backup functionality to a volume
 
-When creating a volume template, you can add in the template that you want to create backups of the volume periodically using the https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html[Cloud Backup^] service.
+When creating a volume template, you can add in the template that you want to create backups of the volume periodically using the https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html[BlueXP backup and recovery^] service.
 
 TIP: This action is not applicable for Azure NetApp Files volumes.
 
@@ -633,9 +633,9 @@ If you want to create backups for a different volume, you can enter those detail
 
 . Click *Apply* to save your changes.
 
-=== Add Data Sense functionality to a volume
+=== Add BlueXP classification functionality to a volume
 
-When creating a volume template, you can add in the template that you want to scan the volume for compliance and classification using the https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[Cloud Data Sense^] service.
+When creating a volume template, you can add in the template that you want to scan the volume for compliance and classification using the https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[BlueXP classification^] service.
 
 image:screenshot_template_data_sense.png[A screenshot of the page to enable scanning functionality for your volumes.]
 
@@ -645,42 +645,42 @@ If you want to scan data for a different volume, you can enter those details man
 
 . Click *Apply* to save your changes.
 
-=== Add Replication functionality to a volume
+=== Add BlueXP replication functionality to a volume
 
-When creating a volume template, you can add in the template that you want to replicate the data in the volume to another volume using the https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html[Replication^] service. You can replicate data to a Cloud Volumes ONTAP cluster or to an on-prem ONTAP cluster.
+When creating a volume template, you can add in the template that you want to replicate the data in the volume to another volume using the https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html[BlueXP replication^] service. You can replicate data to a Cloud Volumes ONTAP cluster or to an on-prem ONTAP cluster.
 
 TIP: This action is not applicable for Azure NetApp Files volumes.
 
-Replication functionality consists of three parts: selecting the source volume, selecting the destination volume, and defining the replication settings. Each section is described below.
+BlueXP replication functionality consists of three parts: selecting the source volume, selecting the destination volume, and defining the replication settings. Each section is described below.
 
 . *Source Details*: Enter the details about the source volume you want to replicate:
 +
-image:screenshot_template_replication_source.png[A screenshot of the page to define the replication source volume location.]
+image:screenshot_template_replication_source.png[A screenshot of the page to define the BlueXP replication source volume location.]
 +
 .. By default, the first three variables are filled out for the working environment, storage VM, and volume to indicate that you will be replicating the volume created previously in this same template. So if that's what you want to do, you're all set.
 +
 If you want to replicate a different volume, you can enter those details manually. See how to link:reference-template-building-blocks.html#pass-values-between-template-actions[complete the Context fields] to indicate a different volume.
 +
-.. Replication requires that the source and destination working environments are connected through their intercluster LIFs. Enter the intercluster LIF IP address for the source working environment.
+.. BlueXP replication requires that the source and destination working environments are connected through their intercluster LIFs. Enter the intercluster LIF IP address for the source working environment.
 +
 To get this information: double-click the working environment, click the menu icon, and click Information.
 
 . *Destination Details*: Enter the details about the destination volume that will be created by the replication operation:
 +
-image:screenshot_template_replication_dest.png[A screenshot of the page to define the replication destination volume location.]
+image:screenshot_template_replication_dest.png[A screenshot of the page to define the BlueXP replication destination volume location.]
 +
 .. Select the working environment where the volume will be created.
 .. Select the storage VM on which the volume will reside.
 .. When replicating a volume to a Cloud Volumes ONTAP cluster (not to an on-prem ONTAP cluster), you need to specify the Destination Provider (AWS, Azure, or GCP).
 .. When replicating a volume to a Cloud Volumes ONTAP cluster, you can specify whether volume tiering is enabled on the destination volume.
 .. For the destination volume name, click in the field and select one of the 5 options. You can let the admin enter any name by selecting *Free Text*, or you can specify that the volume name must have a certain prefix or suffix, that it _contains_ certain characters, or that it follows rules from a regular expression (regex) you enter.
-.. Replication requires that the source and destination working environments are connected through their intercluster LIFs. Enter the intercluster LIF IP address for the destination working environment.
+.. BlueXP replication requires that the source and destination working environments are connected through their intercluster LIFs. Enter the intercluster LIF IP address for the destination working environment.
 .. Select the aggregate on which the volume will reside.
 .. When replicating a volume to a Cloud Volumes ONTAP cluster (not to an on-prem ONTAP cluster), you need to specify the type of disk that will be used for the new volume.
 
 . *Replication Details*: Enter the details about the type and frequency of the replication operation:
 +
-image:screenshot_template_replication_policy.png[A screenshot of the page to define the replication settings for the relationship.]
+image:screenshot_template_replication_policy.png[A screenshot of the page to define the BlueXP replication settings for the relationship.]
 +
 .. Select the https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication-policies.html#types-of-replication-policies[replication policy^] that you want to use.
 .. Choose a one-time copy or a recurring replication schedule.

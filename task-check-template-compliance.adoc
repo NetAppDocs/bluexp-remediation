@@ -33,13 +33,13 @@ image:screenshot_template_drift_on_template.png[A screenshot showing how to enab
 
 . Later, a storage admin edits a volume and disables Snapshot copies.
 
-. You run drift checking on all templates, and the AppTemplates service compares the Snapshot copies template setting to the current setting in the volume. Any non-compliant values are flagged so you can fix the incorrect setting.
+. You run drift checking on all templates, and the BlueXP remediation service compares the Snapshot copies template setting to the current setting in the volume. Any non-compliant values are flagged so you can fix the incorrect setting.
 
 == The Drift Dashboard
 
 The Drift Dashboard shows the total number of resources (for example, volumes) that have been created using your templates, the number that are still compliant with the template, the number that are not compliant (drifted), and the number that were created with Drift disabled.
 
-image:screenshot_template_drift_dashboard.png[A screenshot of the Drift Dashboard for the AppTemplates service.]
+image:screenshot_template_drift_dashboard.png[A screenshot of the Drift Dashboard for the BlueXP remediation service.]
 
 * The controls at the top of each column allow you to sort the results in numerical or alphabetical order.
 * The image:screenshot_plus_icon.gif[] enables you to filter the results by Template Name, Drift Policy & Status, and Action Type. For example:
@@ -72,9 +72,9 @@ image:screenshot_template_drift_report_one_resource.png[A screenshot of a drift 
 
 To view a drift report for resources that have been created from your templates, click image:button_download.png[] to download a .CSV file. The drift report reflects what is currently filtered on the page - it does not show all resources unless you haven't applied any filters on the page.
 
-=== Replication health details in the drift report
+=== BlueXP replication health details in the drift report
 
-When link:task-define-templates.html#add-replication-functionality-to-a-volume[enabling Replication on a volume using templates], you can choose to show more detailed replication information in the drift report by enabling drift in the "Enable replication health monitoring" field. When enabled, the drift report shows whether the health of the Replication relationship is healthy or unhealthy (drifted), along with the SnapMirror lag time, status, and last transfer time.
+When link:task-define-templates.html#add-replication-functionality-to-a-volume[enabling BlueXP replication on a volume using templates], you can choose to show more detailed replication information in the drift report by enabling drift in the "Enable replication health monitoring" field. When enabled, the drift report shows whether the health of the BlueXP replication relationship is healthy or unhealthy (drifted), along with the SnapMirror lag time, status, and last transfer time.
 
 This screenshot shows the replication details for a SnapMirror relationship that is unhealthy in the drift report.
 
