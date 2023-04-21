@@ -185,7 +185,7 @@ See <<What to do after you have created the template,what you should tell your u
 
 Creating a template for an Azure NetApp Files volume is done in the same manner as creating a template for a Cloud Volumes ONTAP volume.
 
-See https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-manage-anf-volumes.html#creating-volumes[how to provision Azure NetApp Files volumes^] for details about all the parameters you need to complete in the ANF volume template.
+See https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html#create-volumes[how to provision Azure NetApp Files volumes^] for details about all the parameters you need to complete in the ANF volume template.
 
 .Steps
 
@@ -684,7 +684,7 @@ image:screenshot_template_replication_policy.png[A screenshot of the page to def
 +
 .. Select the https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication-policies.html#types-of-replication-policies[replication policy^] that you want to use.
 .. Choose a one-time copy or a recurring replication schedule.
-.. Enable replication health status monitoring if you want the drift report to include the replication health of the SnapMirror relationship along with the lag time, status, and last transfer time. link:task-check-template-compliance.html#replication-health-details-in-the-drift-report[See what this looks like in the drift report].
+.. Enable replication health status monitoring if you want the drift report to include the replication health of the SnapMirror relationship along with the lag time, status, and last transfer time. link:task-check-template-compliance.html#bluexp-replication-health-details-in-the-drift-report[See what this looks like in the drift report].
 .. Select whether you want to set a transfer rate limit, and then enter the maximum rate (in kilobytes per second) at which data can be transferred. You can enter a fixed value, or you can provide a minimum and maximum and let the storage admin select a value in that range.
 
 . Click *Apply* to save your changes.
