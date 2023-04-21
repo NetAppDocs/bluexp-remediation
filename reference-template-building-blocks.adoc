@@ -47,17 +47,17 @@ As an example, if you enter "^[a-zA-Z][0-9a-zA-Z_]{0,149}$" as the regex for the
 
 == Pass values between template actions
 
-Templates have the ability to use information from a previous action to populate a field in a future action. For example, when defining the name of the volume that will have Cloud Backup functionality enabled, you can instruct the Backup action to use the value the storage admin entered as the name of the volume from the Create Cloud Volumes ONTAP action.
+Templates have the ability to use information from a previous action to populate a field in a future action. For example, when defining the name of the volume that will have BlueXP backup and recovery functionality enabled, you can instruct the Backup action to use the value the storage admin entered as the name of the volume from the Create Cloud Volumes ONTAP action.
 
-There are three types of information that the AppTemplate service can use:
+There are three types of information that the BlueXP remediation service can use:
 
 * Input value - This is the actual value the storage admin entered into a field in a previous template action.
 * Output value - This is the value BlueXP generates after creating a resource from a previous template action.
 * Enter your own value - This is a value that you enter; it is not accessed from a previous action in the template.
 
-For example, to enable compliance scanning on a volume, the Cloud Data Sense service needs both the "volume name" that the storage admin enters (the Input value), and the "volume uuid" that BlueXP generates when it creates the volume (the Output value).
+For example, to enable compliance scanning on a volume, the BlueXP classification service needs both the "volume name" that the storage admin enters (the Input value), and the "volume uuid" that BlueXP generates when it creates the volume (the Output value).
 
-The following illustration shows how to enter this information in the Cloud Data Sense action section of the template.
+The following illustration shows how to enter this information in the BlueXP classification action section of the template.
 
 image:screenshot_template_variable_input_output.png[An illustration showing how to use a value entered in a previous action to populate a field in another action.]
 
@@ -67,9 +67,9 @@ Conditions tell the template to execute different actions depending on whether t
 
 image:screenshot_template_select_condition.png[A screenshot of how to add conditional statements in your templates.]
 
-For example, you may have a guideline that if a volume has a capacity larger than 50 GB then Cloud Backup is required to be enabled on that volume. If the volume has a smaller capacity, then Cloud Backup is not enabled. You can implement this in your template as shown below.
+For example, you may have a guideline that if a volume has a capacity larger than 50 GB then BlueXP backup and recovery is required to be enabled on that volume. If the volume has a smaller capacity, then BlueXP backup and recovery is not enabled. You can implement this in your template as shown below.
 
-image:screenshot_template_condition_example.png[A screenshot showing how conditions may be used in your template to conditionally enable Cloud Backup.]
+image:screenshot_template_condition_example.png[A screenshot showing how conditions may be used in your template to conditionally enable BlueXP backup and recovery.]
 
 Conditions consist of two parts:
 

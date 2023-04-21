@@ -13,7 +13,7 @@ summary: BlueXP enables you to apply tags to your _existing_ resources to help o
 :imagesdir: ./media/
 
 [.lead]
-BlueXP (formerly Cloud Manager) enables you to apply tags to your _existing_ resources to help organize and manage those resources. Tags are metadata that you can use to group resources to identify applications, environments, regions, billing codes, cloud providers, and more.
+BlueXP enables you to apply tags to your _existing_ resources to help organize and manage those resources. Tags are metadata that you can use to group resources to identify applications, environments, regions, billing codes, cloud providers, and more.
 
 Tags consists of a *tag key* and a *tag value*. For example, you can create a tag key called "Environment" and then add tag values of "Production" and "Test". After they are applied to your resources, you can quickly search for and view resources that match the key/value pair.
 
