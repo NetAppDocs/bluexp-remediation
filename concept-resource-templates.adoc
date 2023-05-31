@@ -41,9 +41,9 @@ A template is a chain of "actions" that have some pre-defined values. You can bu
 
 *Services actions:*
 
-* Activate https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html[BlueXP backup and recovery^] on volumes (not applicable for Azure NetApp Files)
-* Activate https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[BlueXP classification^] on volumes
-* Activate https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html[BlueXP replication^] on volumes (not applicable for Azure NetApp Files)
+* Activate https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html[BlueXP backup and recovery^] on volumes (not applicable for Azure NetApp Files)
+* Activate https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[BlueXP classification^] on volumes
+* Activate https://docs.netapp.com/us-en/bluexp-replication/concept-replication.html[BlueXP replication^] on volumes (not applicable for Azure NetApp Files)
 
 For example, you can create a template that creates a Cloud Volumes ONTAP volume. Or that creates a Cloud Volumes ONTAP volume and then enables BlueXP backup and recovery on that volume. Or that that creates a Cloud Volumes ONTAP volume, and then enables BlueXP backup and recovery _and_ BlueXP classification on that volume.
 
